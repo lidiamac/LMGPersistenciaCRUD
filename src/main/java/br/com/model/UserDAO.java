@@ -99,6 +99,7 @@ public class UserDAO {
 		}
 	}
 		
+	
 	public User buscarUsuario(Integer id) {
 		Conexao c = Conexao.getInstance();
 		Connection con = c.getConnection();
