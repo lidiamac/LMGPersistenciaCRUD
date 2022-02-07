@@ -26,7 +26,7 @@
 <div class="container w-50">
 	<div class="border border-1 m-5 rounded-3">
 	<h1 class="mb-4 text-start mt-5 ms-5">Adicionar usuário</h1>
-	<input type="hidden" value=${id} name="id">
+	<input type="hidden" value="${id}" name="id">
 	
 	<form class="p-5" method="post" action="ServletPersistencia">
   <div class="mb-3">

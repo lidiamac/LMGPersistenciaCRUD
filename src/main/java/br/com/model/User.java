@@ -1,4 +1,6 @@
 package br.com.model;
+
+
 public class User {
 	private Integer id;
 	private String nome;
@@ -12,11 +14,6 @@ public class User {
 		this.pais = pais;
 	}
 	
-	public User (Integer id, String nome, String email) {
-		this.id = id;
-		this.nome = nome;
-		this.email = email;
-	}
 	
 	public Integer getId() {
 		return this.id;

@@ -12,15 +12,15 @@ public class UserDAO {
 
 	}
 	
-	public void adicionarUsuario(User u) {
+	public void adicionarUsuario(User abobrinhaUser) {
 		Conexao c = Conexao.getInstance();
 		Connection con = c.getConnection();
 		
 		try {
 			PreparedStatement p = con.prepareStatement("insert into users (nome, email, pais) values (?, ?, ?)");
-			p.setString(1, u.getNome());
-			p.setString(2, u.getEmail());
-			p.setString(3, u.getPais());
+			p.setString(1, abobrinhaUser.getNome());
+			p.setString(2, abobrinhaUser.getEmail());
+			p.setString(3, abobrinhaUser.getPais());
 			System.out.println(p);
 			p.executeUpdate();
 			System.out.println("Comando executado");
@@ -57,7 +57,6 @@ public class UserDAO {
 		}
 		return usuarios;
 	}
-	
 	
 	public void removerUsuario(Integer id) {
 		Conexao c = Conexao.getInstance();
@@ -99,7 +98,6 @@ public class UserDAO {
 		}
 	}
 		
-	
 	public User buscarUsuario(Integer id) {
 		Conexao c = Conexao.getInstance();
 		Connection con = c.getConnection();

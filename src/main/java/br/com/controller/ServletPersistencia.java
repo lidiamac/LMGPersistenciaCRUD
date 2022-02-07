@@ -1,4 +1,4 @@
-package controller;
+package br.com.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
