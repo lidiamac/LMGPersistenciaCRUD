@@ -50,8 +50,8 @@
 	      <td>${user.email}</td>
 	      <td>${user.pais}</td>
 	      <td class="text-center">
-	      	<a href="?id=${i.index}&opcao=1">Alterar</a>
-	      	<a href="?id=${i.index}&opcao=0">Remover</a>
+	      	<a href="?id=${user.id}&opcao=1">Alterar</a>
+	      	<a href="?id=${user.id}&opcao=0">Remover</a>
 	      </td>
 	    </tr>
     </c:forEach>  

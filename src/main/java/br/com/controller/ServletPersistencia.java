@@ -39,15 +39,16 @@ public class ServletPersistencia extends HttpServlet {
 				userdao.removerUsuario(Integer.parseInt(id));
 			} else if (opcao.equals("1")) {
 				User user = userdao.buscarUsuario(Integer.parseInt(id));
+				request.setAttribute("id", user.getId());
 				request.setAttribute("nome", user.getNome());
 				request.setAttribute("email", user.getEmail());
 				request.setAttribute("pais", user.getPais());
 				
 				request.getRequestDispatcher("/adicionar.jsp").forward(request, response);
 			}
-			request.setAttribute("usuario", userdao.mostrarUsuarios());
+			
 		}
-		
+		request.setAttribute("usuario", userdao.mostrarUsuarios());
 		request.getRequestDispatcher("/").forward(request, response);
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}

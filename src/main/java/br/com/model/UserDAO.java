@@ -75,7 +75,6 @@ public class UserDAO {
 		}
 	}
 	
-	//public void updateUser(Integer id, String newName) {
 	public void alterarUsuario(User updateUser) {
 		Conexao c = Conexao.getInstance();
 		Connection con = c.getConnection();
